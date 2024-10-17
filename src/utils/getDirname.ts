@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import path from 'path';
 
 /**
  * 현재 모듈의 디렉토리 경로를 리턴합니다.
@@ -8,6 +8,5 @@ import { dirname } from 'path';
  * @returns 디렉토리 경로
  */
 export const getDirname = (metaUrl: string): string => {
-  const __filename = fileURLToPath(metaUrl);
-  return dirname(__filename);
+  return path.dirname(fileURLToPath(metaUrl));
 };
